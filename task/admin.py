@@ -6,6 +6,7 @@ admin.site.register(CareTasks)
 admin.site.register(Medications)
 admin.site.register(Task)
 admin.site.register(RiskAssessment)
+admin.site.register(Notes)
 
 
 

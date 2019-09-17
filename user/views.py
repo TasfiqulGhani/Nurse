@@ -2,8 +2,9 @@ from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 
-from task.models import Task, CareTasks, Medications, RiskAssessment
-from task.serializer import TaskSerializer, CareTasksSerializer, MedicationsSerializer, RiskAssessmentSerializer
+from task.models import Task, CareTasks, Medications, RiskAssessment, Notes
+from task.serializer import TaskSerializer, CareTasksSerializer, MedicationsSerializer, RiskAssessmentSerializer, \
+    NotesSerializer
 from user.models import *
 from user.serializer import *
 
@@ -90,6 +91,16 @@ def get_risks(request):
     except:
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+@api_view(['GET'])
+def get_notes(request):
+    try:
+        if request.method == 'GET':
+            task_id = request.GET.get('id')
+            risks = Notes.objects.filter(task_id__exact=task_id)
+
+            return Response(data=NotesSerializer(risks, many=True).data, status=status.HTTP_200_OK)
+    except:
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()

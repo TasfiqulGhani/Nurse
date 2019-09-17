@@ -14,7 +14,7 @@ class Task(models.Model):
     lon = models.FloatField(max_length=100, null=False, blank=False)
     entry_note = models.CharField(max_length=200, default='')
     deadline = models.DateTimeField(default=timezone.now)
-    notes = models.CharField(max_length=200, default='')
+    task_notes = models.CharField(max_length=200, default='')
     isDone = models.BooleanField(default=False)
     isStarted = models.BooleanField(default=False)
     done_time = models.DateTimeField(default=timezone.now)
@@ -35,6 +35,11 @@ class RiskAssessment(models.Model):
     note = models.CharField(max_length=200, default='')
     date = models.DateTimeField(default=timezone.now)
 
+
+class Notes(models.Model):
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, null=False)
+    note = models.CharField(max_length=200, default='')
+    date = models.DateTimeField(default=timezone.now)
 
 class CareTasks(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
