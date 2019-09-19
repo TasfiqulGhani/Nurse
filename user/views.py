@@ -24,7 +24,12 @@ def employee_login(request):
             password = request.POST.get('password')
             print(email)
             print(password)
-            employee = Employee.objects.get(email__contains=email, password__contains=password)
+            employee = Employee.objects.filter(email=email, password=password)
+
+            if employee.count()>0:
+                employee = Employee.objects.filter(email=email, password=password)
+            else:
+                return Response(status=status.HTTP_204_NO_CONTENT)
             return Response(data=EmployeeSerializer(employee, many=True).data, status=status.HTTP_200_OK)
     except:
         return Response(status=status.HTTP_204_NO_CONTENT)
@@ -91,6 +96,7 @@ def get_risks(request):
     except:
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+
 @api_view(['GET'])
 def get_notes(request):
     try:
@@ -101,6 +107,7 @@ def get_notes(request):
             return Response(data=NotesSerializer(risks, many=True).data, status=status.HTTP_200_OK)
     except:
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
