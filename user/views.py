@@ -24,7 +24,7 @@ def employee_login(request):
             password = request.POST.get('password')
             print(email)
             print(password)
-            employee = Employee.objects.filter(email__contains=email, password__contains=password)
+            employee = Employee.objects.get(email__contains=email, password__contains=password)
             return Response(data=EmployeeSerializer(employee, many=True).data, status=status.HTTP_200_OK)
     except:
         return Response(status=status.HTTP_204_NO_CONTENT)

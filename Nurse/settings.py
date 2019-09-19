@@ -68,24 +68,24 @@ WSGI_APPLICATION = 'Nurse.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.contrib.gis.db.backends.postgis',
-    #     'NAME': 'db',
-    #     'USER': 'tashfik',
-    #     'PASSWORD': '123123',
-    #     'HOST': 'localhost',
-    #     # 'HOST': '34.215.146.248',
-    #     'PORT': '5432'
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mydb',
-        'USER': 'admin',
-        'PASSWORD': '1234rtyu',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'db',
+        'USER': 'tashfik',
+        'PASSWORD': '123123',
         'HOST': 'localhost',
         # 'HOST': '34.215.146.248',
         'PORT': '5432'
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'mydb',
+    #     'USER': 'admin',
+    #     'PASSWORD': '1234rtyu',
+    #     'HOST': 'localhost',
+    #     # 'HOST': '34.215.146.248',
+    #     'PORT': '5432'
+    # }
 
 
 }
