@@ -19,7 +19,7 @@ class Task(models.Model):
     task_notes = models.CharField(max_length=200, default='')
     isDone = models.BooleanField(default=False)
     isStarted = models.BooleanField(default=False)
-    dnr= models.CharField(max_length=200, default='')
+    dnrs= models.CharField(max_length=200, default='')
     done_time = models.DateTimeField(default=timezone.now)
     start_time = models.DateTimeField(default=timezone.now)
     created_at = models.DateTimeField(default=timezone.now)
