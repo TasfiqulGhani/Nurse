@@ -1,13 +1,16 @@
 from django.conf.urls import url, include
 from rest_framework.routers import SimpleRouter
 from task.views import RiskAssessmentViewSet, NotesViewSet
-from user.views import EmployeeViewSet, CustomerViewSet, UserViewSet, employee_login, get_tasks, get_risks, get_notes
+from user.views import EmployeeViewSet, CustomerViewSet, UserViewSet, employee_login, get_tasks, get_risks, get_notes, \
+    EmployeeLocationViewSet, DNRViewSet
 
 router = SimpleRouter()
 
 router.register('employee', EmployeeViewSet, 'review')
 router.register('customer', CustomerViewSet, 'fuel')
+router.register('location', EmployeeLocationViewSet, 'fuel')
 router.register('user', UserViewSet, 'station')
+router.register('dnr', DNRViewSet, 'station')
 router.register('risk', RiskAssessmentViewSet, 'risk')
 router.register('notes', NotesViewSet, 'risk')
 

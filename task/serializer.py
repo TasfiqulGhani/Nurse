@@ -29,6 +29,17 @@ class CareTasksSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class EmployeeLocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EmployeeLocation
+        fields = '__all__'
+
+
+class DNRSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DNR
+        fields = '__all__'
+
 class MedicationsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Medications

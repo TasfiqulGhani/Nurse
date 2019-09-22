@@ -3,6 +3,8 @@ from django.utils import timezone
 
 from user.models import Customer, Employee
 
+from django.contrib.gis.db import models
+
 
 class Task(models.Model):
     title = models.CharField(max_length=200, null=False)
@@ -17,6 +19,7 @@ class Task(models.Model):
     task_notes = models.CharField(max_length=200, default='')
     isDone = models.BooleanField(default=False)
     isStarted = models.BooleanField(default=False)
+    dnr= models.CharField(max_length=200, default='')
     done_time = models.DateTimeField(default=timezone.now)
     start_time = models.DateTimeField(default=timezone.now)
     created_at = models.DateTimeField(default=timezone.now)
@@ -36,14 +39,29 @@ class RiskAssessment(models.Model):
     date = models.DateTimeField(default=timezone.now)
 
 
+class DNR(models.Model):
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, null=False)
+    note = models.CharField(max_length=200, default='')
+    date = models.DateTimeField(default=timezone.now)
+
+
 class Notes(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE, null=False)
     note = models.CharField(max_length=200, default='')
     date = models.DateTimeField(default=timezone.now)
+
 
 class CareTasks(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, default='')
     description = models.CharField(max_length=200, default='')
     is_done = models.BooleanField(default=False)
+    date = models.DateTimeField(default=timezone.now)
+
+
+class EmployeeLocation(models.Model):
+    user = models.ForeignKey(Employee, on_delete=models.CASCADE, null=False)
+    lon = models.FloatField()
+    lat = models.FloatField()
+    type = models.IntegerField(default=0)
     date = models.DateTimeField(default=timezone.now)

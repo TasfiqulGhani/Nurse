@@ -2,9 +2,9 @@ from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 
-from task.models import Task, CareTasks, Medications, RiskAssessment, Notes
+from task.models import Task, CareTasks, Medications, RiskAssessment, Notes, EmployeeLocation, DNR
 from task.serializer import TaskSerializer, CareTasksSerializer, MedicationsSerializer, RiskAssessmentSerializer, \
-    NotesSerializer
+    NotesSerializer, EmployeeLocationSerializer, DNRSerializer
 from user.models import *
 from user.serializer import *
 
@@ -14,6 +14,11 @@ from rest_framework.response import Response
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+
+class DNRViewSet(viewsets.ModelViewSet):
+    queryset = DNR.objects.all()
+    serializer_class = DNRSerializer
 
 
 @api_view(['POST'])
@@ -26,7 +31,7 @@ def employee_login(request):
             print(password)
             employee = Employee.objects.filter(email=email, password=password)
 
-            if employee.count()>0:
+            if employee.count() > 0:
                 employee = Employee.objects.filter(email=email, password=password)
             else:
                 return Response(status=status.HTTP_204_NO_CONTENT)
@@ -112,6 +117,11 @@ def get_notes(request):
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
+
+
+class EmployeeLocationViewSet(viewsets.ModelViewSet):
+    queryset = EmployeeLocation.objects.all()
+    serializer_class = EmployeeLocationSerializer
 
 
 class EmployeeViewSet(viewsets.ModelViewSet):

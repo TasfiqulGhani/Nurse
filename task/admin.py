@@ -7,6 +7,8 @@ admin.site.register(Medications)
 admin.site.register(Task)
 admin.site.register(RiskAssessment)
 admin.site.register(Notes)
+admin.site.register(EmployeeLocation)
 
+admin.site.register(DNR)
 
 
