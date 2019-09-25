@@ -2,9 +2,9 @@ from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 
-from task.models import Task, CareTasks, Medications, RiskAssessment, Notes, EmployeeLocation, DNR
+from task.models import Task, CareTasks, Medications, RiskAssessment, Notes, EmployeeLocation, DNR, Files
 from task.serializer import TaskSerializer, CareTasksSerializer, MedicationsSerializer, RiskAssessmentSerializer, \
-    NotesSerializer, EmployeeLocationSerializer, DNRSerializer
+    NotesSerializer, EmployeeLocationSerializer, DNRSerializer, FilesSerializer
 from user.models import *
 from user.serializer import *
 
@@ -47,6 +47,17 @@ def get_cares(request):
         task_id = request.GET.get('id')
         cares = CareTasks.objects.filter(task=task_id)
         return Response(data=CareTasksSerializer(cares, many=True).data, status=status.HTTP_200_OK)
+
+
+
+
+@api_view(['GET'])
+def get_files(request):
+    if request.method == 'GET':
+        task_id = request.GET.get('id')
+        cares = Files.objects.filter(task=task_id)
+        return Response(data=FilesSerializer(cares, many=True).data, status=status.HTTP_200_OK)
+
 
 
 @api_view(['GET'])

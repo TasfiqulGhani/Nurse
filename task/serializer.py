@@ -23,6 +23,11 @@ class TaskSerializer(serializers.ModelSerializer):
 
 
 
+class FilesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Files
+        fields = '__all__'
+
 class CareTasksSerializer(serializers.ModelSerializer):
     class Meta:
         model = CareTasks

@@ -51,6 +51,14 @@ class Notes(models.Model):
     date = models.DateTimeField(default=timezone.now)
 
 
+
+class Files(models.Model):
+    task = models.ForeignKey(Task, on_delete=models.CASCADE, null=False)
+    file = models.URLField(null=True , blank=True)
+    name = models.CharField(max_length=200, default='')
+    note = models.CharField(max_length=200, default='')
+    date = models.DateTimeField(default=timezone.now)
+
 class CareTasks(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     title = models.CharField(max_length=200, default='')
