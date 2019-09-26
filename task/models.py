@@ -30,6 +30,7 @@ class Medications(models.Model):
     title = models.CharField(max_length=200, default='')
     description = models.CharField(max_length=200, default='')
     is_done = models.BooleanField(default=False)
+    is_excused = models.BooleanField(default=False)
     date = models.DateTimeField(default=timezone.now)
 
 
