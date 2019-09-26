@@ -19,7 +19,7 @@ class Task(models.Model):
     task_notes = models.CharField(max_length=200, default='')
     isDone = models.BooleanField(default=False)
     isStarted = models.BooleanField(default=False)
-    dnrs= models.CharField(max_length=200, default='')
+    dnrs = models.CharField(max_length=200, default='')
     done_time = models.DateTimeField(default=timezone.now)
     start_time = models.DateTimeField(default=timezone.now)
     created_at = models.DateTimeField(default=timezone.now)
@@ -52,13 +52,13 @@ class Notes(models.Model):
     date = models.DateTimeField(default=timezone.now)
 
 
-
 class Files(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE, null=False)
-    file = models.URLField(null=True , blank=True)
+    file = models.URLField(null=True, blank=True)
     name = models.CharField(max_length=200, default='')
     note = models.CharField(max_length=200, default='')
     date = models.DateTimeField(default=timezone.now)
+
 
 class CareTasks(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
