@@ -49,15 +49,12 @@ def get_cares(request):
         return Response(data=CareTasksSerializer(cares, many=True).data, status=status.HTTP_200_OK)
 
 
-
-
 @api_view(['GET'])
 def get_files(request):
     if request.method == 'GET':
         task_id = request.GET.get('id')
         cares = Files.objects.filter(task=task_id)
         return Response(data=FilesSerializer(cares, many=True).data, status=status.HTTP_200_OK)
-
 
 
 @api_view(['GET'])
@@ -84,7 +81,7 @@ def get_medications_check(request):
             med = Medications.objects.get(id=med_id)
             med.is_excused = True
             med.save()
-        return Response(data='', status=status.HTTP_200_OK)
+    return Response(data='', status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])
