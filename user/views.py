@@ -73,12 +73,15 @@ def get_medications_check(request):
     if request.method == 'GET':
         med_id = request.GET.get('id')
         statuss = request.GET.get('status')
+        med = Medications.objects.get(id=med_id)
         if statuss:
-            med = Medications.objects.get(id=med_id)
+            print(statuss)
+
             med.is_done = True
             med.save()
         else:
-            med = Medications.objects.get(id=med_id)
+            print(statuss)
+
             med.is_excused = True
             med.save()
     return Response(data='', status=status.HTTP_200_OK)
