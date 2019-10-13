@@ -40,6 +40,25 @@ def employee_login(request):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+@api_view(['POST'])
+def customer_login(request):
+    try:
+        if request.method == 'POST':
+            email = request.POST.get('email')
+            password = request.POST.get('password')
+            print(email)
+            print(password)
+            customer = Customer.objects.filter(email=email, password=password)
+
+            if customer.count() > 0:
+                customer = Customer.objects.filter(email=email, password=password)
+            else:
+                return Response(status=status.HTTP_204_NO_CONTENT)
+            return Response(data=CustomerSerializer(customer, many=True).data, status=status.HTTP_200_OK)
+    except:
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
 @api_view(['GET'])
 def get_cares(request):
     # try:
@@ -95,6 +114,18 @@ def get_tasks(request):
         if request.method == 'GET':
             employee_id = request.GET.get('id')
             tasks = Task.objects.filter(employee_id__exact=employee_id)
+
+            return Response(data=TaskSerializer(tasks, many=True).data, status=status.HTTP_200_OK)
+    except:
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['GET'])
+def get_tasks_customer(request):
+    try:
+        if request.method == 'GET':
+            customer_id = request.GET.get('id')
+            tasks = Task.objects.filter(customer_id__exact=customer_id)
 
             return Response(data=TaskSerializer(tasks, many=True).data, status=status.HTTP_200_OK)
     except:
