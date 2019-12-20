@@ -18,7 +18,8 @@ SECRET_KEY = 'mf*v=w^#!4ofh2(a5hlas&jn2n8tfakp$hhm0pls#1!srlw0@t'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Application definition
 
 INSTALLED_APPS = [
@@ -31,6 +32,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'user.apps.UserConfig',
     'task.apps.TaskConfig',
+    'folders.apps.FoldersConfig',
 ]
 
 MIDDLEWARE = [
