@@ -40,6 +40,24 @@ def employee_login(request):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+
+@api_view(['POST'])
+def admin_login(request):
+    try:
+        if request.method == 'POST':
+            email = request.POST.get('email')
+            password = request.POST.get('password')
+            employee = Employee.objects.filter(email=email, password=password)
+
+            if employee.count() > 0:
+                employee = Employee.objects.filter(email=email, password=password)
+            else:
+                return Response(status=status.HTTP_204_NO_CONTENT)
+            return Response(data=EmployeeSerializer(employee, many=True).data, status=status.HTTP_200_OK)
+    except:
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
 @api_view(['POST'])
 def customer_login(request):
     try:

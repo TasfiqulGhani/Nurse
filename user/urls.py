@@ -2,7 +2,7 @@ from django.conf.urls import url, include
 from rest_framework.routers import SimpleRouter
 from task.views import RiskAssessmentViewSet, NotesViewSet
 from user.views import EmployeeViewSet, CustomerViewSet, UserViewSet, employee_login, get_tasks, get_risks, get_notes, \
-    EmployeeLocationViewSet, DNRViewSet, customer_login, get_tasks_customer
+    EmployeeLocationViewSet, DNRViewSet, customer_login, get_tasks_customer, admin_login
 
 router = SimpleRouter()
 
@@ -18,6 +18,8 @@ urlpatterns = [
     # url('', include(router.urls), name='router'),
     url(r'^api/', include(router.urls), name='api'),
     url('employee/login/', employee_login, name='history-list'),
+
+    url('admin/login/', admin_login, name='history-list'),
     url('customer/login/', customer_login, name='history-list'),
     url('employee/tasks/', get_tasks, name='get-tasks-list'),
     url('customer/tasks/', get_tasks_customer, name='get-tasks-list'),
