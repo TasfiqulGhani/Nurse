@@ -45,13 +45,13 @@ def admin_login(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
-        employee = Employee.objects.filter(email=email, password=password)
+        employee = Employee.objects.filter(email__exact=email, password__exact=password)
 
         if employee.count() > 0:
-            employee = Employee.objects.filter(email=email, password=password)
+            employee = Employee.objects.filter(email__exact=email, password__exact=password)
+            return Response(data=EmployeeSerializer(employee, many=True).data, status=status.HTTP_200_OK)
         else:
             return Response(status=status.HTTP_204_NO_CONTENT)
-        return Response(data=EmployeeSerializer(employee, many=True).data, status=status.HTTP_200_OK)
 
 
 @api_view(['POST'])
