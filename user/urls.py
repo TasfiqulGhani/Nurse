@@ -18,7 +18,6 @@ urlpatterns = [
     # url('', include(router.urls), name='router'),
     url(r'^api/', include(router.urls), name='api'),
     url('employee/login/', employee_login, name='history-list'),
-
     url('admin/login/', admin_login, name='history-list'),
     url('customer/login/', customer_login, name='history-list'),
     url('employee/tasks/', get_tasks, name='get-tasks-list'),
