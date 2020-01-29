@@ -2,7 +2,7 @@ from django.conf.urls import url, include
 from rest_framework.routers import SimpleRouter
 from task.views import RiskAssessmentViewSet, NotesViewSet
 from user.views import EmployeeViewSet, CustomerViewSet, UserViewSet, employee_login, get_tasks, get_risks, get_notes, \
-    EmployeeLocationViewSet, DNRViewSet, customer_login, get_tasks_customer, admin_login
+    EmployeeLocationViewSet, DNRViewSet, customer_login, get_tasks_customer, admin_login, simple_upload
 
 router = SimpleRouter()
 
@@ -24,5 +24,6 @@ urlpatterns = [
     url('customer/tasks/', get_tasks_customer, name='get-tasks-list'),
     url('employee/risk/', get_risks, name='get-get_risks-list'),
     url('employee/notes/', get_notes, name='get-notes-list'),
+    url(r'^upload/$', simple_upload, name='upload'),
 
 ]

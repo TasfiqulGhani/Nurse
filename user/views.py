@@ -1,7 +1,9 @@
+from django.conf.urls import url
 from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view
 
+from django.core.files.storage import FileSystemStorage
 from task.models import Task, CareTasks, Medications, RiskAssessment, Notes, EmployeeLocation, DNR, Files
 from task.serializer import TaskSerializer, CareTasksSerializer, MedicationsSerializer, RiskAssessmentSerializer, \
     NotesSerializer, EmployeeLocationSerializer, DNRSerializer, FilesSerializer
@@ -146,6 +148,17 @@ def get_tasks_customer(request):
     except:
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+@api_view(['POST'])
+def simple_upload(request):
+    url(r'^upload/$', simple_upload, name='upload'),
+    if request.method == 'POST' and request.FILES['file']:
+        myfile = request.FILES['file']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+
+        return Response({'url': 'http://3.18.112.196:8001' + uploaded_file_url}, status=status.HTTP_201_CREATED)
+    return Response({'result': 'Only Post Requ'}, status=status.HTTP_401_UNAUTHORIZED)
 
 @api_view(['GET'])
 def get_risks(request):
