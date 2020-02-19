@@ -10,11 +10,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='customer',
-            name='access_to_home',
-            field=models.CharField(default='', max_length=500),
-        ),
+
         migrations.AddField(
             model_name='customer',
             name='accomodation_info',
