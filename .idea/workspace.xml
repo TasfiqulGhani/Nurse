@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e5a3ea5-9ca4-4b58-bc07-9888d33e1ce5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/user/migrations/0002_auto_20200127_0905.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/migrations/0002_auto_20200127_0905.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/migrations/0002_auto_20200127_0905.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,17 +64,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user/migrations/0002_auto_20200127_0905.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/migrations/0001_initial.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1070" />
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -126,6 +119,7 @@
       <find>STATIC_ROOT</find>
       <find>upload</find>
       <find>A</find>
+      <find>access</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -294,7 +288,7 @@
       <workItem from="1581868591927" duration="450000" />
       <workItem from="1581917442969" duration="175000" />
       <workItem from="1582085027256" duration="2108000" />
-      <workItem from="1582090642552" duration="477000" />
+      <workItem from="1582090642552" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1582090302265</created>
@@ -307,7 +301,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67050000" />
+    <option name="totallyTimeSpent" value="67092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -522,14 +516,16 @@
     <entry file="file://$PROJECT_DIR$/user/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/migrations/0002_auto_20200127_0905.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="16" selection-end-column="10" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1070" />
       </provider>
     </entry>
   </component>
