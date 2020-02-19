@@ -83,15 +83,15 @@ DATABASES = {
     #     # 'HOST': '34.215.146.248',
     #     'PORT': '5432'
     # }
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mydb',
-        'USER': 'admin',
-        'PASSWORD': '1234rtyu',
-        'HOST': 'localhost',
-        # 'HOST': '34.215.146.248',
-        'PORT': '5432'
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'mydb',
+    #     'USER': 'admin',
+    #     'PASSWORD': '1234rtyu',
+    #     'HOST': 'localhost',
+    #     # 'HOST': '34.215.146.248',
+    #     'PORT': '5432'
+    # }
 
 
 }

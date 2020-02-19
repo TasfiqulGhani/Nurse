@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e5a3ea5-9ca4-4b58-bc07-9888d33e1ce5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/user/migrations/0002_auto_20200127_0905.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nurse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Nurse/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,22 +51,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Nurse/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
-              <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="84" selection-end-column="7" />
+              <caret line="76" column="4" selection-start-line="76" selection-start-column="6" selection-end-line="84" selection-end-column="7" />
               <folding>
-                <marker date="1582090712118" expanded="true" signature="2490:2736" ph="..." />
+                <marker date="1582091564475" expanded="true" signature="2492:2752" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/migrations/0001_initial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1070" />
+            <state relative-caret-position="-757" />
           </provider>
         </entry>
       </file>
@@ -142,8 +142,8 @@
         <option value="$PROJECT_DIR$/user/models.py" />
         <option value="$PROJECT_DIR$/user/views.py" />
         <option value="$PROJECT_DIR$/user/urls.py" />
-        <option value="$PROJECT_DIR$/Nurse/settings.py" />
         <option value="$PROJECT_DIR$/user/migrations/0002_auto_20200127_0905.py" />
+        <option value="$PROJECT_DIR$/Nurse/settings.py" />
       </list>
     </option>
   </component>
@@ -288,7 +288,7 @@
       <workItem from="1581868591927" duration="450000" />
       <workItem from="1581917442969" duration="175000" />
       <workItem from="1582085027256" duration="2108000" />
-      <workItem from="1582090642552" duration="519000" />
+      <workItem from="1582090642552" duration="869000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1582090302265</created>
@@ -301,13 +301,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67092000" />
+    <option name="totallyTimeSpent" value="67442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20243205" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20243205" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -321,7 +321,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32871014" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.28674698" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4985694" visible="true" weight="0.24457832" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4985694" visible="true" weight="0.24457832" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32771084" />
       <window_info anchor="bottom" id="manage.py@Nurse" order="13" weight="0.3287483" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -503,16 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Nurse/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="84" selection-end-column="7" />
-          <folding>
-            <marker date="1582090712118" expanded="true" signature="2490:2736" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -525,7 +515,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1070" />
+        <state relative-caret-position="-757" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nurse/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="6" selection-end-line="84" selection-end-column="7" />
+          <folding>
+            <marker date="1582091564475" expanded="true" signature="2492:2752" ph="..." />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
