@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e5a3ea5-9ca4-4b58-bc07-9888d33e1ce5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nurse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Nurse/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,10 +90,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Nurse/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
+            <state relative-caret-position="166">
+              <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="84" selection-end-column="7" />
               <folding>
-                <marker date="1582090282637" expanded="true" signature="2474:2734" ph="..." />
+                <marker date="1582090712118" expanded="true" signature="2490:2736" ph="..." />
               </folding>
             </state>
           </provider>
@@ -318,7 +318,7 @@
       <workItem from="1581868591927" duration="450000" />
       <workItem from="1581917442969" duration="175000" />
       <workItem from="1582085027256" duration="2108000" />
-      <workItem from="1582090642552" duration="24000" />
+      <workItem from="1582090642552" duration="70000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1582090302265</created>
@@ -331,10 +331,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66597000" />
+    <option name="totallyTimeSpent" value="66643000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="39" width="1440" height="823" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20243205" />
@@ -351,7 +351,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32871014" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50143063" side_tool="true" weight="0.28674698" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4985694" weight="0.26987952" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4985694" visible="true" weight="0.24457832" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3287483" />
       <window_info anchor="bottom" id="manage.py@Nurse" order="13" weight="0.3287483" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -535,10 +535,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Nurse/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
+        <state relative-caret-position="166">
+          <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="84" selection-end-column="7" />
           <folding>
-            <marker date="1582090282637" expanded="true" signature="2474:2734" ph="..." />
+            <marker date="1582090712118" expanded="true" signature="2490:2736" ph="..." />
           </folding>
         </state>
       </provider>
